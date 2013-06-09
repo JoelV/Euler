@@ -24,13 +24,30 @@ function primeFactor(x) {
 	}
 	primeFactors.push(x);
 	//errorTrace("primeFactors.length = ", primeFactors.length);
-	for(var i = 0; i < primeFactors.length; i++) {
+	/*for(var i = 0; i < primeFactors.length; i++) {
 		outputStr += primeFactors[i] + " ";
 	}
-	return outputStr;
+	return outputStr;*/
+	//return the largest prime factor
+	return primeFactors;
+
 }
 
-document.write(primeFactor(600851475143));
+function largestPrimeFactor(array) {
+	var largestPrimeFactor;
+	largestPrimeFactor = array[0];
+	for(var i = 1; i < array.length; i++) {
+		if(largestPrimeFactor < array[i])
+			largestPrimeFactor = array[i];
+
+	}
+	return largestPrimeFactor;
+}
+
+//document.write(primeFactor(13195) + "<br/>");
+//document.write(primeFactor(600851475143) + '<br/>');
+//document.write(largestPrimeFactor(primeFactor(13195)) + '<br/>');
+document.write(largestPrimeFactor(primeFactor(600851475143)));
 
 
 
