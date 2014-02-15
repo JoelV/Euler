@@ -1,0 +1,30 @@
+{
+  "name": "Euler",
+  "version": "0.0.0",
+  "description": "This my solution to Problem 3 at projecteuler.net.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "expect.js": "~0.2.0"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-contrib-watch": "~0.5.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/JoelV/Euler.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoelV/Euler/issues"
+  },
+  "homepage": "https://github.com/JoelV/Euler"
+}

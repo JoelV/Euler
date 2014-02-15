@@ -7,7 +7,7 @@ function isPrime(x) {
 }
 
 function primeFactor(x) {
-	var primeFactors = new Array();
+	var primeFactors = [];
 	var outputStr = "";
 	if(isPrime(x)) return x;
 	//smallest prime number that divides x
@@ -34,20 +34,20 @@ function primeFactor(x) {
 }
 
 function largestPrimeFactor(array) {
-	var largestPrimeFactor;
-	largestPrimeFactor = array[0];
+	var primeFactor;
+	primeFactor = array[0];
 	for(var i = 1; i < array.length; i++) {
-		if(largestPrimeFactor < array[i])
-			largestPrimeFactor = array[i];
+		if(primeFactor < array[i])
+			primeFactor = array[i];
 
 	}
-	return largestPrimeFactor;
+	return primeFactor;
 }
 
 //document.write(primeFactor(13195) + "<br/>");
 //document.write(primeFactor(600851475143) + '<br/>');
 //document.write(largestPrimeFactor(primeFactor(13195)) + '<br/>');
-document.write(largestPrimeFactor(primeFactor(600851475143)));
+//document.write(largestPrimeFactor(primeFactor(600851475143)));
 
 
 
