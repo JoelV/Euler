@@ -7,13 +7,13 @@ describe('triangle', function() {
   });
 });
 
-describe('getPowers', function() {
-  it('should get the the powers', function() {
-    expect(app.getPowers([2, 2, 2, 2, 5, 5, 5])).to.eql([4,3]);
-    expect(app.getPowers([3, 3, 5, 11, 11])).to.eql([2,1,2]);
-    expect(app.getPowers([3,4,5,66])).to.eql([1,1,1,1]);
-  });
-});
+// describe('getPowers', function() {
+//   it('should get the the powers', function() {
+//     expect(app.getPowers([2, 2, 2, 2, 5, 5, 5])).to.eql([4,3]);
+//     expect(app.getPowers([3, 3, 5, 11, 11])).to.eql([2,1,2]);
+//     expect(app.getPowers([3,4,5,66])).to.eql([1,1,1,1]);
+//   });
+// });
 
 describe('numOfDivisors', function() {
   it('should return 6', function() {

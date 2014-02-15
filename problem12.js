@@ -27,41 +27,31 @@ module.exports = function() {
   }
 
   function numOfDivisorsEloquent(n) {
-    var primeDivisorsArray = []; 
+    var primeDivisors = {}; 
     for(i = 2; i < n; i++) {
+      var count = 0;
       while(n%i === 0) {
-        primeDivisorsArray.push(i);
+        count++;
         n = n/i;
       }
-      if(solution.isPrime(n) && n !== 1) {
-        primeDivisorsArray.push(n);
-        n = 1;
+      if(count > 0) { 
+        primeDivisors[i] = count;
+        count = 0;
       }
-    }      
 
-    var powers = getPowers(primeDivisorsArray);
+      if(solution.isPrime(n) && n !== 1) {
+        count++;
+        primeDivisors[n] = count;
+        n = 1;
+      } 
+    } 
     var result = 1;
-    for(var i = 0; i < powers.length; i++) {
-      result *= powers[i]+1;
+    for(var key in primeDivisors) {
+      if(primeDivisors.hasOwnProperty(key)) {
+        result *= primeDivisors[key] + 1;
+      }
     }
     return result;
-  }
-
-  function getPowers(arry) {
-    var result = [];
-    var num = arry[0];
-    var count = 0;
-    while(arry.length > 0) {
-      for(var i = 0; i < arry.length; i++) {
-        if(num === arry[i]) count++;
-        else break;
-      }
-      result.push(count);
-      arry.splice(0, count);
-      count = 0;
-      num = arry[0];
-    }
-    return result; 
   }
 
   function run(n) {
@@ -79,8 +69,7 @@ module.exports = function() {
     triangle: triangle,
     numOfDivisors: numOfDivisorsEloquent,
     run: run,
-    isPrime: isPrimeNaive,
-    getPowers: getPowers
+    isPrime: isPrimeNaive
   };
   
   return solution;
