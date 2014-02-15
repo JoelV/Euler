@@ -26,15 +26,7 @@ module.exports = function() {
     }
   }
 
-  function primeFactors(n) {
-
-  }
-
   function numOfDivisorsEloquent(n) {
-    var orig = n;
-    //start at 2 
-    //keeping  n%2 === 0  divide by 2 
-    //else get left over and that will be n
     var primeDivisorsArray = []; 
     for(i = 2; i <= n; i++) {
       while(n%i === 0) {
@@ -88,7 +80,6 @@ module.exports = function() {
     numOfDivisors: numOfDivisorsEloquent,
     run: run,
     isPrime: isPrimeNaive,
-    primeFactors: primeFactors,
     getPowers: getPowers
   };
   
