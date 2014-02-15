@@ -28,17 +28,17 @@ module.exports = function() {
 
   function numOfDivisorsEloquent(n) {
     var primeDivisorsArray = []; 
-    for(i = 2; i <= n; i++) {
+    for(i = 2; i < n; i++) {
       while(n%i === 0) {
         primeDivisorsArray.push(i);
         n = n/i;
       }
-
       if(solution.isPrime(n) && n !== 1) {
         primeDivisorsArray.push(n);
-        break;      
+        n = 1;
       }
     }      
+
     var powers = getPowers(primeDivisorsArray);
     var result = 1;
     for(var i = 0; i < powers.length; i++) {

@@ -1,3 +1,3 @@
-var app = require('./problem12.js')();
+var solution12 = require('./problem12.js')();
 
-app.run(500);
+solution12.run(500);
