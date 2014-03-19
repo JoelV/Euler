@@ -7,14 +7,6 @@ describe('triangle', function() {
   });
 });
 
-// describe('getPowers', function() {
-//   it('should get the the powers', function() {
-//     expect(app.getPowers([2, 2, 2, 2, 5, 5, 5])).to.eql([4,3]);
-//     expect(app.getPowers([3, 3, 5, 11, 11])).to.eql([2,1,2]);
-//     expect(app.getPowers([3,4,5,66])).to.eql([1,1,1,1]);
-//   });
-// });
-
 describe('numOfDivisors', function() {
   it('should return 6', function() {
     expect(app.numOfDivisors(28)).to.be(6);
@@ -28,6 +20,9 @@ describe('numOfDivisors', function() {
   it('should return 8', function() {
     expect(app.numOfDivisors(389578)).to.be(8);
   });
+  it('should return 2', function() {
+    expect(app.numOfDivisors(824633720831)).to.be(2);
+  })
 });
 
 describe('isPrime', function() {

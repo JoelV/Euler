@@ -43,6 +43,7 @@ module.exports = function() {
         count++;
         primeDivisors[n] = count;
         n = 1;
+        count = 0;
       } 
     } 
     var result = 1;
