@@ -16,5 +16,5 @@ The code for the each problem is in problem*.js
 To run the solution for each problem
 
 ```
->node solution*.js
+> node solution*.js
 ```
