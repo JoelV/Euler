@@ -1,17 +1,17 @@
 var utils = require('./lib/utils.js')();
 module.exports = function() {
-  function sumSeq(max, truthy, seq) {
+  function sumSeq(untilFun, truthy, seqToSingleNum) {
     return function() {
-      return seq.apply(null, [max, truthy]); 
+      return seqToSingleNum.apply(null, [untilFun, truthy]); 
     };
   }
 
-  function fib(max, truthy) {
+  function fibSum(untilFun, truthy) {
     var sum = 0;
     var prev = 1;
     var n;
     if(truthy(prev)) { sum += prev; }
-    for(var i = 2; i <= max; i+=n) {
+    for(var i = 2; i <= untilFun.call(); i+=n) {
       if(truthy(i)) { sum+= i;}
       n = prev;
       prev = i;
@@ -20,7 +20,7 @@ module.exports = function() {
   }
   return {
     isEven: utils.isMultiple(2),
-    fibSumEvenUnderFourMil: sumSeq(4000000, utils.isMultiple(2), fib), 
-    fib10: sumSeq(10, utils.isMultiple(2), fib)
+    fibSumEvenUnderFourMil: sumSeq(function() { return 4000000; }, utils.isMultiple(2), fibSum), 
+    fib10: sumSeq(function() { return 10; }, utils.isMultiple(2), fibSum)
   };
 };
