@@ -1,7 +1,7 @@
 #### Project Euler Solutions
 ---
 
-My functional approach to solving problems in project Euler. These solutions are aimed to be the most efficient. It's just me practicing the concepts of functional javascript.
+My functional approach to solving problems in project Euler. These solutions are not aimed to be the most efficient. It's just me practicing the concepts of functional javascript.
 
 ##### Running Development Environment
 
