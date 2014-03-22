@@ -1,4 +1,6 @@
 var utils = require('./lib/utils.js')();
+var _ = require('underscore');
+
 module.exports = function() {
   function sumSeq(untilFun, truthy, seqToSingleNum) {
     return function() {
@@ -20,7 +22,7 @@ module.exports = function() {
   }
   return {
     isEven: utils.isMultiple(2),
-    fibSumEvenUnderFourMil: sumSeq(function() { return 4000000; }, utils.isMultiple(2), fibSum), 
-    fib10: sumSeq(function() { return 10; }, utils.isMultiple(2), fibSum)
+    fibSumEvenUnderFourMil: sumSeq(function() { return 4000000; }, utils.isMultiple(function() { return 2; }), fibSum), 
+    fib10: sumSeq(function() { return 10; }, utils.isMultiple(function() { return 2; }), fibSum)
   };
 };
