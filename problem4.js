@@ -1,4 +1,5 @@
 var utils = require('./lib/utils')();
+var _ = require('underscore');
 
 module.exports = function() {
 
@@ -13,7 +14,10 @@ module.exports = function() {
       return num.toString() === num.toString().split('').reverse().join('');
     }),
     greatestPalindrome: utils.numFromSeq(
-      function(prev, cur) { return prev > cur ? prev: cur; },
+      //function(prev, cur) { return prev > cur ? prev: cur; },
+      function(arry) {
+        return _.reduce(arry, function(prev, cur) { return prev > cur ? prev: cur; }, 0);
+      },
       function() {
         var arrayPal = [];
         for(var i = 100; i<= 999; i++) {

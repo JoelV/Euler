@@ -12,7 +12,7 @@ module.exports = function() {
     smallestNumDivOneThroughTwenty: function() {
       var isDivisibleOneToTwenty = utils.isMultiples(
         function() {
-          return [11,13,12,14,15,16,17,18,19,20];
+          return [11,12,13,14,15,16,17,18,19,20];
         }, 'and');
       i = 20;  
       while(!isDivisibleOneToTwenty(i)) { i += 20;}
