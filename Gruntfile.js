@@ -1,6 +1,6 @@
 module.exports = function(grunt) {
   grunt.initConfig({
-    jshint: ['*.js'],
+    jshint: ['*.js', 'lib/*.js'],
     mochaTest: {
       test: {
         options: {
@@ -11,7 +11,7 @@ module.exports = function(grunt) {
     },
     watch: {
       app: {
-        files: ['*.js'],
+        files: ['*.js', 'lib/*.js'],
         tasks: ['jshint', 'mochaTest']
       },
       mocha: {

@@ -1,7 +1,7 @@
 var utils = require('./lib/utils.js')();
 var _ = require('underscore');  
 
-function primeFactors(n) {
+function primeFactors(n) { //from stackoverflow
   var factors = [];
   var d = 2;
   while(n > 1) {
