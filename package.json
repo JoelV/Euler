@@ -7,9 +7,10 @@
     "test": "test"
   },
   "dependencies": {
+    "big-integer": "^1.2.10",
     "expect.js": "~0.2.0",
-    "underscore": "^1.6.0",
-    "q": "^1.0.1"
+    "q": "^1.0.1",
+    "underscore": "^1.6.0"
   },
   "devDependencies": {
     "grunt": "~0.4.2",
